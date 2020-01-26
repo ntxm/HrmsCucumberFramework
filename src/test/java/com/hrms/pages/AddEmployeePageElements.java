@@ -9,7 +9,7 @@ import com.hrms.testbase.BaseClass;
 public class AddEmployeePageElements {
 	
 	
-	@FindBy(id="personal_txtEmployeeId")
+	@FindBy(id="employeeId")
 	public WebElement personalEmpID;
 	
 	@FindBy(id="firstName")

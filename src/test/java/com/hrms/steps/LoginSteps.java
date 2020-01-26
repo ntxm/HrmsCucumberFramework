@@ -1,6 +1,6 @@
 package com.hrms.steps;
 
-import javax.security.auth.login.Configuration;
+import org.junit.Assert;
 
 import com.hrms.pages.LoginPageElements;
 import com.hrms.testbase.BaseClass;
@@ -8,6 +8,7 @@ import com.hrms.utils.CommonMethods;
 import com.hrms.utils.ConfigsReader;
 
 import io.cucumber.java.en.*;
+
 
 public class LoginSteps extends CommonMethods {
 	
@@ -39,6 +40,20 @@ public class LoginSteps extends CommonMethods {
 	@Then("Close the browser")
 	public void close_the_browser() {
 		BaseClass.tearDown();
+	}
+
+	
+	@When("I enter valid username and invalid password")
+	public void i_enter_valid_username_and_invalid_password() {
+		login = new LoginPageElements(); //login initialized
+		sendText(login.username, ConfigsReader.getProperty("username"));
+		sendText(login.password, "wrongPasswordSent");
+	}
+
+	@Then("I have an error message")
+	public void i_have_an_error_message() {
+	   boolean error = login.errorMsg.isDisplayed();
+	   Assert.assertTrue("Error message is not displayed", error);
 	}
 
 
