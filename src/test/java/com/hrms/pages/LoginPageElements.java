@@ -27,7 +27,7 @@ public class LoginPageElements extends CommonMethods {
 	@FindBy(id="spanMessage")
 	public WebElement errorMsg;
 	
-	
+	//constructor
 	public LoginPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
