@@ -48,6 +48,52 @@ public class Recruitment extends CommonMethods {
 	@FindBy(css="input#btnDelete")
 	public WebElement buttonDelete;
 	
+	@FindBy(css="input#btnSave")
+	public WebElement buttonSave;
+	
+	@FindBy(id="addCandidate_firstName")
+	public WebElement addCandidateFirstName;
+	
+	@FindBy(id="addCandidate_middleName")
+	public WebElement addCandidateMiddleName;
+	
+	@FindBy(id="addCandidate_lastName")
+	public WebElement addCandidateLastName;
+	
+	@FindBy(id="addCandidate_email")
+	public WebElement addCandidateEmail;
+	
+	@FindBy(id="addCandidate_contactNo")
+	public WebElement addCandidateContactNo;
+	
+	@FindBy(css="select#addCandidate_vacancy")
+	public WebElement addCandidateVacancy;
+	
+	@FindBy(id="addCandidate_resume")
+	public WebElement addCandidateResume;
+	
+	@FindBy(id="addCandidate_keyWords")
+	public WebElement addCandidateKeyWords;
+	
+	@FindBy(id="addCandidate_comment")
+	public WebElement addCandidateComment;
+	
+	@FindBy(css="input#addCandidate_appliedDate")
+	public WebElement addCandidateApplicationDate;
+	
+	@FindBy(css="select.ui-datepicker-month")
+	public WebElement calendarMonth;
+	
+	@FindBy(css="select.ui-datepicker-year")
+	public WebElement calendarYear;
+	
+	@FindBy(xpath="//table/tbody/tr/td/a")
+	public WebElement calendarDay;
+	
+	@FindBy(xpath="//input[@id='addCandidate_appliedDate']/following-sibling::img")
+	public WebElement calendarIcon;
+	
+	
 	
 	
 	public Recruitment() {

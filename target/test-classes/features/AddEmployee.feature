@@ -1,7 +1,7 @@
 @sprint1,addEmployee
 Feature: Add Employee
 
-Background: 
+Background: Comes from LoginSteps.java
 
 Given I open browser and navigated to the HRMS
 And I enter valid username and valid password

@@ -38,8 +38,12 @@ public class DashboardPageElements extends CommonMethods {
 	public void navigateToLeaveList() {
 		click(leaveLink);
 		click(leaveList);
-		
-		
+
+	}
+	
+	public void navigateToRecruitment() {
+		jsClick(recruitmentLink);
+		jsClick(candidatesLink);
 	}
 
 }
