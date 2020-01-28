@@ -24,6 +24,13 @@ public class DashboardPageElements extends CommonMethods {
 	@FindBy(linkText="Employee List")
 	public WebElement empList;
 	
+	@FindBy(linkText = "Recruitment")
+	public WebElement recruitmentLink;
+	
+	@FindBy(linkText = "Candidates")
+	public WebElement candidatesLink;
+	
+	
 	public DashboardPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
