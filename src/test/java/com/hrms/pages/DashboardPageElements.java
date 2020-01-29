@@ -30,6 +30,9 @@ public class DashboardPageElements extends CommonMethods {
 	@FindBy(linkText = "Candidates")
 	public WebElement candidatesLink;
 	
+	@FindBy(linkText = "Reports")
+	public WebElement reportsLink;
+	
 	
 	public DashboardPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
@@ -49,6 +52,11 @@ public class DashboardPageElements extends CommonMethods {
 	public void navigateToAddEmployee() {
 		jsClick(PIMLink);
 		jsClick(AddEmpLink);
+	}
+	
+	public void navigateToReports() {
+		jsClick(PIMLink);
+		jsClick(reportsLink);
 	}
 	
 	
