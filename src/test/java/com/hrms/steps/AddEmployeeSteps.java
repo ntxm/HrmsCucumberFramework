@@ -1,9 +1,5 @@
 package com.hrms.steps;
 
-
-
-
-
 import org.junit.Assert;
 
 import com.hrms.pages.AddEmployeePageElements;
@@ -11,9 +7,9 @@ import com.hrms.pages.DashboardPageElements;
 import com.hrms.pages.ViewEmployeePageElements;
 import com.hrms.utils.CommonMethods;
 
-import io.cucumber.java.en.*;
-
-
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class AddEmployeeSteps extends CommonMethods {
 	

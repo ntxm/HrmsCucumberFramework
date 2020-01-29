@@ -1,32 +1,27 @@
 @sprint2, @addEmployee
 Feature: Add Employee
 
-Background: Comes from LoginSteps.java
+  Background: 
+    Given I open browser and navigated to the HRMS
+    And I logged in into HRMS
+    And I navigate to Add Employee Page
 
-Given I open browser and navigated to the HRMS
-And I enter valid username and valid password
-And I click on the login button
+  @"regression"
+  Scenario: Add new employee
+    When I add new employee with "Aeron", "Low" and "Baeron"
+    And I ckick Save
+    Then I verify if employee successfylly created
 
-@"regression"
-Scenario:
+  @"regression"
+  Scenario Outline: Add new employee
+    When I add new employee with "<firstName>", "<middleName>" and "<lastName>"
+    And I ckick Save
+    Then I see Employee with "<firstName>", "<middleName>" and "<lastName>"
 
-Given I navigate to Add Employee Page
-When I add new employee
-Then I verify if employee successfylly created
-And Close the browser
-
-
-# @"regression"
-# Scenario Outline:
-# Given I navigate to Add Employee Page
-# When I add new employee with <firstName> <middleName> <lastName>
-# Then I verify if employee successfylly created
-# And Close the browser
-
-#Examples: 
-#       | firstName  | middleName | lastName  |
-#       | Marsha 		 |     Low 		| Green 		|
-#       | Marsha 	   |     Low 		| Red   	  |
-#       | Marsha 	   |     Low 		| Orange   	|
-#       | Marsha 	   |     Low 		| Pink    	|
-#       | Marsha 	   |     Low 		| Purple   	|
+    Examples: 
+      | firstName | middleName | lastName |
+      | Marsha    | Low        | Green    |
+      | Marsha    | Low        | Red      |
+      | Marsha    | Low        | Orange   |
+      | Marsha    | Low        | Pink     |
+      | Marsha    | Low        | Purple   |
