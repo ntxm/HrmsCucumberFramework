@@ -1,4 +1,4 @@
-@sprint1,login
+@sprint1 @login
 Feature: Login
 
 @smoke

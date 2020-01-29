@@ -1,4 +1,4 @@
-@sprint1,addEmployee
+@sprint2, @addEmployee
 Feature: Add Employee
 
 Background: Comes from LoginSteps.java

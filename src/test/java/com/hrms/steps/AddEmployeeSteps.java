@@ -2,6 +2,8 @@ package com.hrms.steps;
 
 
 
+
+
 import org.junit.Assert;
 
 import com.hrms.pages.AddEmployeePageElements;
@@ -31,7 +33,7 @@ public class AddEmployeeSteps extends CommonMethods {
 		sendText(addEmp.firstName, "Dan");
 		sendText(addEmp.middleName, "Vi");
 		sendText(addEmp.lastName, "Trodler");
-		expectedID = addEmp.personalEmpID.getAttribute("value");
+		expectedID = addEmp.personalEmpID.getText();
 		jsClick(addEmp.saveBtn);
 		
 	   
@@ -40,9 +42,9 @@ public class AddEmployeeSteps extends CommonMethods {
 	@Then("I verify if employee successfylly created")
 	public void i_verify_if_employee_successfylly_created() {
 		ViewEmployeePageElements viewEmp = new ViewEmployeePageElements();
-		String actualID = viewEmp.ActualEmployeeID.getAttribute("value");
-		boolean sameID = expectedID.equals(actualID);
-		Assert.assertTrue("Emp ID NOT matched", sameID);
+		//String actualID = viewEmp.ActualEmployeeID.getText();
+		//boolean sameID = expectedID.equals(actualID);
+		Assert.assertEquals("EmployeeID is NOT matched", viewEmp.ActualEmployeeID.getText(), expectedID);
 	    
 	}
 	
