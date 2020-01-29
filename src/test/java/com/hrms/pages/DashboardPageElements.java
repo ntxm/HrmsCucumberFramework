@@ -45,5 +45,12 @@ public class DashboardPageElements extends CommonMethods {
 		jsClick(recruitmentLink);
 		jsClick(candidatesLink);
 	}
+	
+	public void navigateToAddEmployee() {
+		jsClick(PIMLink);
+		jsClick(AddEmpLink);
+	}
+	
+	
 
 }

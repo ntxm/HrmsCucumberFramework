@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 		features="src/test/resources/features/" //where feature file located
 		, glue = "com/hrms/steps" //implementation code for feature
-		, dryRun = false //which steps are not implementation
+		, dryRun = true //which steps are not implementation
 		, plugin = "pretty"
 		, monochrome = true
 		//, tags = {"@regression"}

@@ -24,10 +24,10 @@ public class AddCandidateSteps extends CommonMethods {
 	
 	@Given("navigate to add candidate page")
 	public void navigate_to_add_candidate_page() {
-		DashboardPageElements dashboard = new DashboardPageElements();
 		rec = new Recruitment();
-		jsClick(dashboard.recruitmentLink);
-		jsClick(dashboard.candidatesLink);
+		DashboardPageElements dashboard = new DashboardPageElements();
+		
+		dashboard.navigateToRecruitment();
 		jsClick(rec.buttonAdd);
 	    
 	}

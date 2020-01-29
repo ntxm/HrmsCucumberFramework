@@ -12,6 +12,15 @@ public class ViewEmployeePageElements {
 	@FindBy(id="personal_txtEmployeeId")
 	public WebElement ActualEmployeeID;
 	
+	@FindBy(id="personal_txtEmpFirstName")
+	public WebElement empFirstName;
+	
+	@FindBy(id="personal_txtEmpMiddleName")
+	public WebElement empMiddleName;
+	
+	@FindBy(id="personal_txtEmpLastName")
+	public WebElement empLastName;
+	
 	public ViewEmployeePageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
