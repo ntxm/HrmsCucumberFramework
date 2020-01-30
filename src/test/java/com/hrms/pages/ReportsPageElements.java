@@ -8,7 +8,7 @@ import com.hrms.testbase.BaseClass;
 
 public class ReportsPageElements {
 	
-	@FindBy(css="input#search_search")
+	@FindBy(id="search_search")
 	public WebElement search;
 	
 	@FindBy(css="input.searchBtn")

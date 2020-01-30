@@ -29,14 +29,18 @@ public class ReportsSteps extends CommonMethods {
 	}
 
 	@When("I enter invalid report")
-	public void i_enter_invalid_report() {
+	public void i_enter_invalid_report() throws InterruptedException {
+	    Thread.sleep(2000);
+		rep.search.clear();
 	    sendText(rep.search, "Test");
 	}
 
 	@When("I click search button")
 	public void i_click_search_button() throws InterruptedException {
-	    rep.buttonSearch.click();
-	    Thread.sleep(3000);
+		Thread.sleep(1000);
+		rep.buttonSearch.click();
+		Thread.sleep(1000);
+	    
 	}
 
 	@Then("I see no record found message")
@@ -48,13 +52,13 @@ public class ReportsSteps extends CommonMethods {
 	}
 
 	@When("I enter valid report")
-	public void i_enter_valid_report() {
+	public void i_enter_valid_report() throws InterruptedException {
+		Thread.sleep(2000);
 		sendText(rep.search, "PIM");
 	}
 
 	@Then("I see the search report is displayed")
 	public void i_see_the_search_report_is_displayed() {
-		String expectedMessage = "PIM Sample Report";
 		String actualResult = rep.tableResult.getText();
 		Assert.assertTrue("Wrong report name is displayed", actualResult.contains("PIM Sample Report"));
 	}

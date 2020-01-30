@@ -1,5 +1,6 @@
 #Author: Natalie
-Feature: report
+@sprint4, @reports
+Feature: Reports
 
   Background: 
     Given I logged in into HRMS
