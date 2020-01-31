@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 		, dryRun = false //which steps are not implementation
 		, plugin = {"pretty", "html:target/html-reports"}
 		, monochrome = true
-		, tags = {"@reports"}
+		, tags = {"@login"}
 		//, name = "reports"
 		)
 

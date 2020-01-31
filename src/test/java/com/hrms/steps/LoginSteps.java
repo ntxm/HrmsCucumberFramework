@@ -7,7 +7,6 @@ import com.hrms.testbase.BaseClass;
 import com.hrms.utils.CommonMethods;
 import com.hrms.utils.ConfigsReader;
 
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -15,11 +14,11 @@ public class LoginSteps extends CommonMethods {
 	
 	LoginPageElements login;
 	
-	@Given("I open browser and navigated to the HRMS")
-	public void i_open_browser_and_navigated_to_the_HRMS() {
-		BaseClass.setUp();
-	    
-	}
+//	@Given("I open browser and navigated to the HRMS")
+//	public void i_open_browser_and_navigated_to_the_HRMS() {
+//		BaseClass.setUp();
+//	    
+//	}
 
 	@When("I enter valid username and valid password")
 	public void i_enter_valid_username_and_valid_password() {
@@ -56,6 +55,22 @@ public class LoginSteps extends CommonMethods {
 	   boolean error = login.errorMsg.isDisplayed();
 	   Assert.assertTrue("Error message is not displayed", error);
 	}
+	
+	
+	@When("I enter {string} and {string}")
+	public void i_enter_and(String username, String password) {
+		login = new LoginPageElements();
+	    sendText(login.username, username);
+	    sendText(login.password, password);
+	}
+
+	@Then("I see {string}")
+	public void i_see(String errorMessage) {
+		login = new LoginPageElements();
+	    String actualErrorMsg = login.errorMsg.getText();
+	    Assert.assertEquals("Message is NOT matched", errorMessage, actualErrorMsg);
+	}
+
 
 
 }

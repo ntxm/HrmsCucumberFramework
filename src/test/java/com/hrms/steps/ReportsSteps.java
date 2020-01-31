@@ -45,7 +45,7 @@ public class ReportsSteps extends CommonMethods {
 
 	@Then("I see no record found message")
 	public void i_see_no_record_found_message() {
-		String expectedMessage = "No Records Found";
+		String expectedMessage = "No Records Found!";
 		String actualResult = rep.tableResult.getText();
 		Assert.assertEquals("Wrong message displayed", expectedMessage, actualResult);
 	    
