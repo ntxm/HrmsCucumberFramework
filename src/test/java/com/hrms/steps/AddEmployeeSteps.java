@@ -12,6 +12,7 @@ import com.hrms.utils.ConfigsReader;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.cucumber.datatable.DataTable;
 
 public class AddEmployeeSteps extends CommonMethods {
 	
@@ -57,6 +58,8 @@ public class AddEmployeeSteps extends CommonMethods {
 		Assert.assertEquals("Name is NOT matched", expectedEmployeeName, actualEmpName);
 	    
 	}
+	
+	
 
 
 }
