@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -17,6 +18,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.hrms.testbase.BaseClass;
@@ -291,14 +293,62 @@ public class CommonMethods extends BaseClass {
 	    	return value;
 	    }
 
+	   /**
+	    * This method select value from dropdown menu by visible text
+	    * @param element
+	    * @param visibleText
+	    */
+	    public static void selectDropDownValue(WebElement element, String visibleText) {
+	    	Select select = new Select(element);
+	    	List<WebElement> dropDownOptions = select.getOptions();
+	    	
+	    	boolean isFound = false;
+	    	for(WebElement option: dropDownOptions) {
+	    		if(option.getText().equals(visibleText)) {
+	    			select.selectByVisibleText(visibleText);
+	    			isFound = true;
+	    			break;
+	    		}
+	    	}
+	    	
+	    	if(!isFound) {
+	    		System.err.println("Value " + visibleText + " was not found in the dropdown");
+	    	}
+	    }
 
-
-
-
+	    /**
+	     * This method select value from dropdown menu by index
+	     * @param element
+	     * @param index
+	     */
+		public static void selectDropDownValue(WebElement element, int index) {
+			Select select = new Select(element);
+			boolean isFound = false;
+			List<WebElement> dropDownOptions = select.getOptions();
+			if(dropDownOptions.size()>index) {
+				select.selectByIndex(index);
+				isFound = true;
+			}
+			
+			if(!isFound) {
+	    		System.err.println("Value with index " + index + " was not found in the dropdown");
+			}
+		}
 		
 		
-		
-		
+		/**
+		 * This method click on the radio button based on the text
+		 * @param elements
+		 * @param radioText
+		 */
+		public static void clickRadioButton(List<WebElement> elements, String radioText) {
+			for(WebElement element: elements) {
+				if(element.getText().equals(radioText)) {
+					element.click();
+					break;
+				}
+			}
+		}
 		
 		
 		
