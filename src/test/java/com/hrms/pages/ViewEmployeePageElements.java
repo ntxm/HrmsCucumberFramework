@@ -23,7 +23,7 @@ public class ViewEmployeePageElements {
 	@FindBy(id="personal_txtEmpLastName")
 	public WebElement empLastName;
 	
-	@FindBy(xpath="//input[@name='personal[optGender]']")
+	@FindBy(xpath="//label[contains(@for, personal_optGender)]")
 	public List<WebElement> gender;
 	
 	public ViewEmployeePageElements() {

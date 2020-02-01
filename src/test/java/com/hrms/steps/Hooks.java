@@ -1,5 +1,6 @@
 package com.hrms.steps;
 
+import com.hrms.testbase.PageInitiliazer;
 import com.hrms.utils.CommonMethods;
 
 import cucumber.api.Scenario;
@@ -12,6 +13,7 @@ public class Hooks extends CommonMethods{
 	public void start(Scenario scenario) {
 		System.out.println("Starting scenario "+scenario.getName());
 		setUp();
+		PageInitiliazer.initiliazeAllPages();
 	}
 	
 	@After

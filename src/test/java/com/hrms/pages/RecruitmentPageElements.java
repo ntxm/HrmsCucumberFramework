@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.hrms.testbase.BaseClass;
 import com.hrms.utils.CommonMethods;
 
-public class Recruitment extends CommonMethods {
+public class RecruitmentPageElements extends CommonMethods {
 	
 	@FindBy(css="select#candidateSearch_jobTitle")
 	public WebElement jobTitle;
@@ -96,7 +96,7 @@ public class Recruitment extends CommonMethods {
 	
 	
 	
-	public Recruitment() {
+	public RecruitmentPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
 	

@@ -7,8 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import com.hrms.pages.DashboardPageElements;
-import com.hrms.pages.Recruitment;
+
 import com.hrms.utils.CommonMethods;
 
 import cucumber.api.java.en.Given;
@@ -17,15 +16,12 @@ import cucumber.api.java.en.When;
 
 public class AddCandidateSteps extends CommonMethods {
 	
-	Recruitment rec;
 	Select ddMenu;
 	String expectedCandidateName = "Aeron Baeron";
 	
 	
 	@Given("navigate to add candidate page")
 	public void navigate_to_add_candidate_page() {
-		rec = new Recruitment();
-		DashboardPageElements dashboard = new DashboardPageElements();
 		
 		dashboard.navigateToRecruitment();
 		jsClick(rec.buttonAdd);

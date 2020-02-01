@@ -1,33 +1,194 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Report.feature");
 formatter.feature({
-  "name": "Login",
+  "name": "Reports",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@sprint1,"
+      "name": "@sprint4,"
     },
     {
-      "name": "@login"
+      "name": "@reports"
     }
   ]
 });
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I logged in into HRMS",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "AddEmployeeSteps.i_logged_in_into_HRMS()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "navigate to the Reports Page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportsSteps.navigate_to_the_Reports_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Search for invalid report",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@sprint4,"
+    },
+    {
+      "name": "@reports"
+    }
+  ]
+});
+formatter.step({
+  "name": "I enter invalid report",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "ReportsSteps.i_enter_invalid_report()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click search button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportsSteps.i_click_search_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I see no record found message",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "ReportsSteps.i_see_no_record_found_message()"
+});
+formatter.result({
+  "error_message": "org.junit.ComparisonFailure: Wrong message displayed expected:\u003cNo Records Found[!]\u003e but was:\u003cNo Records Found[]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat com.hrms.steps.ReportsSteps.i_see_no_record_found_message(ReportsSteps.java:46)\n\tat ✽.I see no record found message(file:src/test/resources/features/Report.feature:12)\n",
+  "status": "failed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I logged in into HRMS",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "AddEmployeeSteps.i_logged_in_into_HRMS()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "navigate to the Reports Page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportsSteps.navigate_to_the_Reports_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Search for valid report",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@sprint4,"
+    },
+    {
+      "name": "@reports"
+    }
+  ]
+});
+formatter.step({
+  "name": "I enter valid report",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "ReportsSteps.i_enter_valid_report()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click search button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportsSteps.i_click_search_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I see the search report is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "ReportsSteps.i_see_the_search_report_is_displayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
 formatter.scenarioOutline({
-  "name": "Invalid Login and message validation",
+  "name": "Add New Report",
   "description": "",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "name": "I enter \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"",
+  "name": "I click Add button",
   "keyword": "When "
 });
 formatter.step({
-  "name": "I click on the login button",
+  "name": "I add report with \"\u003creportName\u003e\", \"\u003cselectedCriteria\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "I see \"\u003cerrorMessage\u003e\"",
-  "keyword": "Then "
+  "name": "I choose field Group \"\u003cfieldGroup\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "I click add Display Field Groups",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "I click on checkbox",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "I click Save Report button",
+  "keyword": "And "
 });
 formatter.examples({
   "name": "",
@@ -36,83 +197,124 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "username",
-        "password",
-        "errorMessage"
+        "reportName",
+        "selectedCriteria",
+        "fieldGroup"
       ]
     },
     {
       "cells": [
-        "Admin",
-        "Admin123",
-        "Invalid credentials"
+        "Employee",
+        "Current Employees Only",
+        "Personal"
       ]
     },
     {
       "cells": [
-        "Admin",
-        "",
-        "Password cannot be empty"
-      ]
-    },
-    {
-      "cells": [
-        "",
-        "Syntax@123",
-        "Username cannot be empty"
-      ]
-    },
-    {
-      "cells": [
-        "",
-        "",
-        "Username cannot be empty"
+        "Candidates",
+        "Current Employees Only",
+        "Skills"
       ]
     }
   ]
 });
-formatter.scenario({
-  "name": "Invalid Login and message validation",
+formatter.background({
+  "name": "",
   "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@sprint1,"
-    },
-    {
-      "name": "@login"
-    }
-  ]
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "I enter \"Admin\" and \"Admin123\"",
-  "keyword": "When "
+  "name": "I logged in into HRMS",
+  "keyword": "Given "
 });
 formatter.match({
-  "location": "LoginSteps.i_enter_and(String,String)"
+  "location": "AddEmployeeSteps.i_logged_in_into_HRMS()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I click on the login button",
+  "name": "navigate to the Reports Page",
   "keyword": "And "
 });
 formatter.match({
-  "location": "LoginSteps.i_click_on_the_login_button()"
+  "location": "ReportsSteps.navigate_to_the_Reports_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Add New Report",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@sprint4,"
+    },
+    {
+      "name": "@reports"
+    }
+  ]
+});
+formatter.step({
+  "name": "I click Add button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "ReportsSteps.i_click_Add_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I see \"Invalid credentials\"",
-  "keyword": "Then "
+  "name": "I add report with \"Employee\", \"Current Employees Only\"",
+  "keyword": "And "
 });
 formatter.match({
-  "location": "LoginSteps.i_see(String)"
+  "location": "ReportsSteps.i_add_report_with(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I choose field Group \"Personal\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportsSteps.i_choose_field_Group(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click add Display Field Groups",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportsSteps.i_click_add_Display_Field_Groups()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on checkbox",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportsSteps.i_click_on_checkbox()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click Save Report button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportsSteps.i_click_Save_Report_button()"
 });
 formatter.result({
   "status": "passed"
@@ -120,146 +322,103 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.scenario({
-  "name": "Invalid Login and message validation",
+formatter.background({
+  "name": "",
   "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@sprint1,"
-    },
-    {
-      "name": "@login"
-    }
-  ]
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "I enter \"Admin\" and \"\"",
-  "keyword": "When "
+  "name": "I logged in into HRMS",
+  "keyword": "Given "
 });
 formatter.match({
-  "location": "LoginSteps.i_enter_and(String,String)"
+  "location": "AddEmployeeSteps.i_logged_in_into_HRMS()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I click on the login button",
+  "name": "navigate to the Reports Page",
   "keyword": "And "
 });
 formatter.match({
-  "location": "LoginSteps.i_click_on_the_login_button()"
+  "location": "ReportsSteps.navigate_to_the_Reports_Page()"
 });
 formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I see \"Password cannot be empty\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LoginSteps.i_see(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Invalid Login and message validation",
+  "name": "Add New Report",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@sprint1,"
+      "name": "@sprint4,"
     },
     {
-      "name": "@login"
+      "name": "@reports"
     }
   ]
 });
-formatter.before({
-  "status": "passed"
-});
 formatter.step({
-  "name": "I enter \"\" and \"Syntax@123\"",
+  "name": "I click Add button",
   "keyword": "When "
 });
 formatter.match({
-  "location": "LoginSteps.i_enter_and(String,String)"
+  "location": "ReportsSteps.i_click_Add_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I click on the login button",
+  "name": "I add report with \"Candidates\", \"Current Employees Only\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "LoginSteps.i_click_on_the_login_button()"
+  "location": "ReportsSteps.i_add_report_with(String,String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I see \"Username cannot be empty\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LoginSteps.i_see(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Invalid Login and message validation",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@sprint1,"
-    },
-    {
-      "name": "@login"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I enter \"\" and \"\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "LoginSteps.i_enter_and(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click on the login button",
+  "name": "I choose field Group \"Skills\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "LoginSteps.i_click_on_the_login_button()"
+  "location": "ReportsSteps.i_choose_field_Group(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I see \"Username cannot be empty\"",
-  "keyword": "Then "
+  "name": "I click add Display Field Groups",
+  "keyword": "And "
 });
 formatter.match({
-  "location": "LoginSteps.i_see(String)"
+  "location": "ReportsSteps.i_click_add_Display_Field_Groups()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on checkbox",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportsSteps.i_click_on_checkbox()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click Save Report button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportsSteps.i_click_Save_Report_button()"
 });
 formatter.result({
   "status": "passed"
