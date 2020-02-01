@@ -81,8 +81,7 @@ formatter.match({
   "location": "ReportsSteps.i_see_no_record_found_message()"
 });
 formatter.result({
-  "error_message": "org.junit.ComparisonFailure: Wrong message displayed expected:\u003cNo Records Found[!]\u003e but was:\u003cNo Records Found[]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat com.hrms.steps.ReportsSteps.i_see_no_record_found_message(ReportsSteps.java:46)\n\tat ✽.I see no record found message(file:src/test/resources/features/Report.feature:12)\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"
