@@ -5,7 +5,7 @@ Feature: Add Employee
     Given I logged in into HRMS
     And I navigate to Add Employee Page
 
-
+	@smoke
   Scenario: Add new employee
     When I add new employee with "Aeron", "Low" and "Baeron"
     And I ckick Save
@@ -25,8 +25,7 @@ Feature: Add Employee
       | Marsha    | Low        | Pink     |
       | Marsha    | Low        | Purple   |
 
-      
-      @smoke
+  @inProgress   
   Scenario: Add and Modify Employee Details
     When I enter employee details
       | FirstName | MiddleName | LastName |

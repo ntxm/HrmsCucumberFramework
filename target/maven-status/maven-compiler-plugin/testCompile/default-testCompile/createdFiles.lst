@@ -1,5 +1,7 @@
 com/hrms/pages/LoginPage.class
+com/hrms/runners/RegressionRunner.class
 com/hrms/utils/Constants.class
+com/hrms/runners/InProgressRunner.class
 com/hrms/steps/Hooks.class
 com/hrms/pages/ViewEmployeePageElements.class
 com/hrms/pages/RecruitmentPageElements.class
@@ -9,10 +11,10 @@ com/hrms/steps/ReportsSteps.class
 com/hrms/steps/LoginSteps.class
 com/hrms/pages/LeaveListPageElements.class
 com/hrms/steps/AddCandidateSteps.class
-com/hrms/runners/RunnerClass.class
 com/hrms/testbase/PageInitiliazer.class
 com/hrms/pages/EmployeeListPageElement.class
 com/hrms/pages/AddEmployeePageElements.class
+com/hrms/runners/SmokeRunner.class
 com/hrms/pages/ReportsPageElements.class
 com/hrms/steps/AddEmployeeSteps.class
 com/hrms/pages/DashboardPageElements.class

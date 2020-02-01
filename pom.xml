@@ -61,7 +61,7 @@
 					
 					<configuration>
 						<includes>
-							<include>**/*RunnerClass.java</include>
+							<include>**/*SmokeRunner.java</include>
 						</includes>
 				</configuration>
 			</plugin>

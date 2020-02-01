@@ -8,14 +8,16 @@
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/pages/LoginPage.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/testbase/BaseClass.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/steps/AddCandidateSteps.java
+/Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/runners/RegressionRunner.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/steps/ReportsSteps.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/steps/Hooks.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/utils/ExcelUtility.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/utils/CommonMethods.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/pages/ReportsPageElements.java
-/Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/runners/RunnerClass.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/pages/RecruitmentPageElements.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/testbase/PageInitiliazer.java
+/Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/runners/SmokeRunner.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/pages/LeaveListPageElements.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/utils/ConfigsReader.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/utils/Constants.java
+/Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/runners/InProgressRunner.java
