@@ -26,6 +26,31 @@ public class ViewEmployeePageElements {
 	@FindBy(xpath="//label[contains(@for, personal_optGender)]")
 	public List<WebElement> gender;
 	
+	@FindBy(id="btnSave")
+	public WebElement buttonEdit;
+	
+	@FindBy(id="personal_txtLicenNo")
+	public WebElement driverLicence;
+	
+	@FindBy(css = "input#personal_txtNICNo")
+	public WebElement ssn;
+	
+	@FindBy(css ="input#personal_txtLicExpDate")
+	public WebElement dlExpireDate;
+	
+	@FindBy(id="personal_txtSINNo")
+	public WebElement sinNumber;
+	
+	@FindBy(id="personal_cmbMarital")
+	public WebElement maritalStatus;
+	
+	@FindBy(id="personal_cmbNation")
+	public WebElement nationality;
+	
+	@FindBy(id="personal_DOB")
+	public WebElement personalDOB;
+	
+	
 	public ViewEmployeePageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}

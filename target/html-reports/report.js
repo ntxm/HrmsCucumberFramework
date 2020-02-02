@@ -41,7 +41,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Add new employee",
+  "name": "Add and Modify Employee Details",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -52,102 +52,90 @@ formatter.scenario({
       "name": "@addEmployee"
     },
     {
-      "name": "@smoke"
+      "name": "@inProgress"
     }
   ]
 });
 formatter.step({
-  "name": "I add new employee with \"Aeron\", \"Low\" and \"Baeron\"",
+  "name": "I enter employee details",
+  "rows": [
+    {
+      "cells": [
+        "FirstName",
+        "MiddleName",
+        "LastName"
+      ]
+    },
+    {
+      "cells": [
+        "John",
+        "J",
+        "Smith"
+      ]
+    }
+  ],
   "keyword": "When "
 });
 formatter.match({
-  "location": "AddEmployeeSteps.i_add_new_employee_with_and(String,String,String)"
+  "location": "AddEmployeeSteps.i_enter_employee_details(DataTable)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I ckick Save",
+  "name": "I click Save",
   "keyword": "And "
 });
 formatter.match({
-  "location": "AddEmployeeSteps.i_ckick_Save()"
+  "location": "AddEmployeeSteps.i_click_Save()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify if employee successfylly created",
+  "name": "I am able to modify Employee Details",
+  "rows": [
+    {
+      "cells": [
+        "DriverLisence",
+        "ExpirationDate",
+        "SSN",
+        "SIN",
+        "Gender",
+        "MaritalStatus",
+        "Nationality",
+        "DOB"
+      ]
+    },
+    {
+      "cells": [
+        "N787878869",
+        "2021-12-08",
+        "123-45-6789",
+        "7687687",
+        "Male",
+        "Other",
+        "Afghan",
+        "1980-10-10"
+      ]
+    },
+    {
+      "cells": [
+        "L247091920",
+        "2018-12-08",
+        "123-45-0000",
+        "1010101",
+        "Female",
+        "Married",
+        "Burmese",
+        "1980-10-10"
+      ]
+    }
+  ],
   "keyword": "Then "
 });
 formatter.match({
-  "location": "AddEmployeeSteps.i_verify_if_employee_successfylly_created()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.uri("file:src/test/resources/features/Login.feature");
-formatter.feature({
-  "name": "Login",
-  "description": "",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@sprint1,"
-    },
-    {
-      "name": "@login"
-    }
-  ]
-});
-formatter.scenario({
-  "name": "Valid login",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sprint1,"
-    },
-    {
-      "name": "@login"
-    },
-    {
-      "name": "@smoke"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I enter valid username and valid password",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "LoginSteps.i_enter_valid_username_and_valid_password()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click on the login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "LoginSteps.i_click_on_the_login_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I successfully logged in",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LoginSteps.i_successfully_logged_in()"
+  "location": "AddEmployeeSteps.i_am_able_to_modify_Employee_Details(DataTable)"
 });
 formatter.result({
   "status": "passed"

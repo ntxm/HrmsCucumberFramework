@@ -31,11 +31,10 @@ Feature: Add Employee
       | FirstName | MiddleName | LastName |
       | John      | J          | Smith    |
     And I click Save
-    And I click on Edit
     Then I am able to modify Employee Details
       | DriverLisence | ExpirationDate | SSN         | SIN     | Gender | MaritalStatus | Nationality | DOB        |
-      | N78787886     | 2021-12-08     | 123-45-6789 | 7687687 | Male   | Other         | Afghan      | 1980-10-10 |
-      | Nhkjkgkhgkg   | 2018-12-08     | yiy-45-6789 | uyiy    | Female | Married       | Burmese     | 1980-10-10 |
+      | N787878869    | 2021-12-08     | 123-45-6789 | 7687687 | Male   | Other         | Afghan      | 1980-10-10 |
+      | L247091920    | 2018-12-08     | 123-45-0000 | 1010101 | Female | Married       | Burmese     | 1980-10-10 |
       
       
       
