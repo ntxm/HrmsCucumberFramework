@@ -1,0 +1,156 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4485663675,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I logged in into HRMS",
+            "match": {
+              "location": "AddEmployeeSteps.i_logged_in_into_HRMS()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5365252133,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "navigate to add candidate page",
+            "match": {
+              "location": "AddCandidateSteps.navigate_to_add_candidate_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-02-02T17:18:08.373Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3646057746,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.start(Scenario)"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Create new Candidate",
+        "description": "",
+        "id": "recruitment.-add-candidates-and-vacancies;create-new-candidate",
+        "after": [
+          {
+            "result": {
+              "duration": 89010978,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.end(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 764981231,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I provide information about candidate",
+            "match": {
+              "location": "AddCandidateSteps.i_provide_information_about_candidate()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1417930621,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Choose date of application",
+            "match": {
+              "location": "AddCandidateSteps.choose_date_of_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2405142347,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I click Save button",
+            "match": {
+              "location": "AddCandidateSteps.i_click_Save_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Name of candidate NOT matched\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat com.hrms.steps.AddCandidateSteps.i_should_see_candidate_at_the_table(AddCandidateSteps.java:79)\n\tat ✽.I should see candidate at the table(file:src/test/resources/features/AddCandidate.feature:13)\n",
+              "duration": 28223289,
+              "status": "failed"
+            },
+            "line": 13,
+            "name": "I should see candidate at the table",
+            "match": {
+              "location": "AddCandidateSteps.i_should_see_candidate_at_the_table()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sprint3"
+          },
+          {
+            "name": "@recruitment"
+          },
+          {
+            "name": "@inProgress"
+          }
+        ]
+      }
+    ],
+    "name": "Recruitment. Add Candidates and Vacancies",
+    "description": "",
+    "id": "recruitment.-add-candidates-and-vacancies",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/AddCandidate.feature",
+    "tags": [
+      {
+        "name": "@sprint3",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@recruitment",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 10
+        }
+      }
+    ]
+  }
+]

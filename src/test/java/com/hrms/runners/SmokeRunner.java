@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 		features="src/test/resources/features/"
 		, glue = "com.hrms.steps"
 		, dryRun = false
-		, plugin = {"pretty", "html:target/html-reports"}
+		, plugin = {"pretty", "html:target/html-reports", "json:target/cucumber.json"}
 		, monochrome = true
 		, tags = {"@smoke"}
 		)

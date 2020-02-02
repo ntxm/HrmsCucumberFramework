@@ -17,7 +17,7 @@ import cucumber.api.java.en.When;
 public class AddCandidateSteps extends CommonMethods {
 	
 	Select ddMenu;
-	String expectedCandidateName = "Aeron Baeron";
+	String expectedCandidateName = "Aeron Baeron!";
 	
 	
 	@Given("navigate to add candidate page")

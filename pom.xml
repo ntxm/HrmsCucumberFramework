@@ -61,11 +61,41 @@
 					
 					<configuration>
 						<includes>
-							<include>**/*SmokeRunner.java</include>
+							<include>**/*InProgressRunner.java</include>
 						</includes>
+						<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>
-
+			
+			<plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>5.0.0</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>HRMSCucumberFramework</projectName>
+                            
+                            <!-- output directory for the generated report -->
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <!-- optional, defaults to outputDirectory if not specified -->
+                            <inputDirectory>${project.build.directory}</inputDirectory>
+                            <jsonFiles>
+                                <!-- supports wildcard or name pattern -->
+                                <param>**/*.json</param>
+                            </jsonFiles>
+                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+			
+			
+			
 
 		</plugins>
 	</build>
