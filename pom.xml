@@ -61,7 +61,7 @@
 					
 					<configuration>
 						<includes>
-							<include>**/*InProgressRunner.java</include>
+							<include>**/*SmokeRunner.java</include>
 						</includes>
 						<testFailureIgnore>true</testFailureIgnore>
 				</configuration>

@@ -191,12 +191,15 @@ public class CommonMethods extends PageInitiliazer {
 		 * @param fileName
 		 */
 		
-		public static String takeScreenshot(String fileName) {
+		public static byte[] takeScreenshot(String fileName) {
 			Date date = new Date();
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HHmmss");
 			String timeStamp = sdf.format(date.getTime());
 			
 			TakesScreenshot ts = (TakesScreenshot)driver;
+			//create picture in a form of bytes -> we need to 
+			byte[] picture = ts.getScreenshotAs(OutputType.BYTES);
+			
 			File file = ts.getScreenshotAs(OutputType.FILE);
 			String screenshotFile = Constants.SCREENSHOTS_FILEPATH + fileName+timeStamp + ".png";
 			try {
@@ -205,7 +208,7 @@ public class CommonMethods extends PageInitiliazer {
 				System.out.println("Cannot take a screenshot");
 			}
 			
-			return screenshotFile;
+			return picture;
 		}
 		
 		

@@ -6,14 +6,13 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="src/test/resources/features/"
-		, glue = "com.hrms.steps"
-		, dryRun = false
+		features="@target/failed.txt"
+		, glue = "com/hrms/steps"
 		, plugin = {"pretty", "html:target/html-reports", "json:target/cucumber.json", "rerun:target/failed.txt"}
 		, monochrome = true
-		, tags = {"@regression"}
 		)
 
-public class RegressionRunner {
-	
+
+public class FailedRunner {
+
 }

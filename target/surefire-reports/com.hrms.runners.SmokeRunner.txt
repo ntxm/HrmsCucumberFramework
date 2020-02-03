@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.hrms.runners.SmokeRunner
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 251.213 s <<< FAILURE! - in com.hrms.runners.SmokeRunner
+Add Employee.Add new employee  Time elapsed: 83.357 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#personal_txtEmpFirstName"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Natalias-MBP.home', ip: 'fe80:0:0:0:488:d20e:8255:4d8c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.5', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/mw/2ygtkhyx12z...}, goog:chromeOptions: {debuggerAddress: localhost:57202}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ca38a56733a7037896b87ac86c2bd7c5
+*** Element info: {Using=id, value=personal_txtEmpFirstName}
+
