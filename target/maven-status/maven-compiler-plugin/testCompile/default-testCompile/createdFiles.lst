@@ -3,6 +3,7 @@ com/hrms/runners/RegressionRunner.class
 com/hrms/utils/Constants.class
 com/hrms/runners/InProgressRunner.class
 com/hrms/steps/Hooks.class
+com/hrms/runners/FailedRunner.class
 com/hrms/pages/ViewEmployeePageElements.class
 com/hrms/pages/RecruitmentPageElements.class
 com/hrms/utils/ConfigsReader.class

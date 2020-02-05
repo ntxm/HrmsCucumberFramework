@@ -36,7 +36,7 @@ public class AddCandidateSteps extends CommonMethods {
 		sendText(rec.addCandidateContactNo, "347 112-1010");
 		sendText(rec.addCandidateKeyWords, "Test, qa, automate");
 		sendText(rec.addCandidateComment, "96% test pass");
-		sendText(rec.addCandidateResume, "/Users/natalia/Downloads/CucumberClass 2_Notes");
+		sendText(rec.addCandidateResume, "/Users/natalia/Downloads/Cucumber.pdf");
 		
 		ddMenu = new Select(rec.addCandidateVacancy);
 		ddMenu.selectByVisibleText("Tester");

@@ -9,6 +9,7 @@
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/testbase/BaseClass.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/steps/AddCandidateSteps.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/runners/RegressionRunner.java
+/Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/runners/FailedRunner.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/steps/ReportsSteps.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/steps/Hooks.java
 /Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/java/com/hrms/utils/ExcelUtility.java

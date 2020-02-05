@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.hrms.runners.SmokeRunner" time="251.213" tests="4" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.hrms.runners.RegressionRunner" time="149.329" tests="12" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -17,7 +17,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib"/>
-    <property name="sun.java.command" value="/Users/natalia/eclipse-workspace/HRMSCucumberFramework/target/surefire/surefirebooter3783060487476513179.jar /Users/natalia/eclipse-workspace/HRMSCucumberFramework/target/surefire 2020-02-02T13-25-06_573-jvmRun1 surefire6989412429258450356tmp surefire_07638417710918424821tmp"/>
+    <property name="sun.java.command" value="/Users/natalia/eclipse-workspace/HRMSCucumberFramework/target/surefire/surefirebooter1774706986579980420.jar /Users/natalia/eclipse-workspace/HRMSCucumberFramework/target/surefire 2020-02-03T02-13-58_652-jvmRun1 surefire3673174817799424294tmp surefire_08207178309874006942tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="surefire.test.class.path" value="/Users/natalia/eclipse-workspace/HRMSCucumberFramework/target/test-classes:/Users/natalia/eclipse-workspace/HRMSCucumberFramework/target/classes:/Users/natalia/.m2/repository/io/cucumber/cucumber-junit/4.3.1/cucumber-junit-4.3.1.jar:/Users/natalia/.m2/repository/io/cucumber/cucumber-core/4.3.1/cucumber-core-4.3.1.jar:/Users/natalia/.m2/repository/io/cucumber/cucumber-html/0.2.7/cucumber-html-0.2.7.jar:/Users/natalia/.m2/repository/io/cucumber/gherkin/5.1.0/gherkin-5.1.0.jar:/Users/natalia/.m2/repository/io/cucumber/tag-expressions/1.1.1/tag-expressions-1.1.1.jar:/Users/natalia/.m2/repository/io/cucumber/cucumber-expressions/6.2.2/cucumber-expressions-6.2.2.jar:/Users/natalia/.m2/repository/io/cucumber/datatable/1.1.12/datatable-1.1.12.jar:/Users/natalia/.m2/repository/io/cucumber/datatable-dependencies/1.1.12/datatable-dependencies-1.1.12.jar:/Users/natalia/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/natalia/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/natalia/.m2/repository/io/cucumber/cucumber-java/4.3.1/cucumber-java-4.3.1.jar:/Users/natalia/.m2/repository/org/apache/poi/poi-ooxml/4.1.0/poi-ooxml-4.1.0.jar:/Users/natalia/.m2/repository/org/apache/poi/poi/4.1.0/poi-4.1.0.jar:/Users/natalia/.m2/repository/commons-codec/commons-codec/1.12/commons-codec-1.12.jar:/Users/natalia/.m2/repository/org/apache/commons/commons-collections4/4.3/commons-collections4-4.3.jar:/Users/natalia/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/natalia/.m2/repository/org/apache/poi/poi-ooxml-schemas/4.1.0/poi-ooxml-schemas-4.1.0.jar:/Users/natalia/.m2/repository/org/apache/xmlbeans/xmlbeans/3.1.0/xmlbeans-3.1.0.jar:/Users/natalia/.m2/repository/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar:/Users/natalia/.m2/repository/com/github/virtuald/curvesapi/1.06/curvesapi-1.06.jar:/Users/natalia/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/natalia/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/natalia/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/natalia/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/natalia/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/natalia/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/natalia/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/natalia/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/natalia/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/natalia/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/natalia/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/natalia/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/natalia/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/natalia/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/natalia/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/natalia/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/natalia/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/natalia/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/natalia/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/natalia/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/natalia/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,14 +31,14 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/natalia/eclipse-workspace/HRMSCucumberFramework/target/surefire/surefirebooter3783060487476513179.jar"/>
+    <property name="surefire.real.class.path" value="/Users/natalia/eclipse-workspace/HRMSCucumberFramework/target/surefire/surefirebooter1774706986579980420.jar"/>
     <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="1.8.0_221-b11"/>
     <property name="user.name" value="natalia"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="10.14.5"/>
+    <property name="os.version" value="10.15.3"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
@@ -61,29 +61,16 @@
     <property name="java.class.version" value="52.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="Add new employee" classname="Add Employee" time="83.357">
-    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#personal_txtEmpFirstName&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Natalias-MBP.home&apos;, ip: &apos;fe80:0:0:0:488:d20e:8255:4d8c%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;1.8.0_221&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/mw/2ygtkhyx12z...}, goog:chromeOptions: {debuggerAddress: localhost:57202}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: ca38a56733a7037896b87ac86c2bd7c5&#10;*** Element info: {Using=id, value=personal_txtEmpFirstName}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"#personal_txtEmpFirstName"}
-  (Session info: chrome=79.0.3945.130)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Natalias-MBP.home', ip: 'fe80:0:0:0:488:d20e:8255:4d8c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.5', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/mw/2ygtkhyx12z...}, goog:chromeOptions: {debuggerAddress: localhost:57202}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ca38a56733a7037896b87ac86c2bd7c5
-*** Element info: {Using=id, value=personal_txtEmpFirstName}
-]]></error>
-    <system-out><![CDATA[Starting scenario Add new employee
-Ending scenario Add new employee
-]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614}) on port 24591
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-Feb 02, 2020 1:25:09 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-]]></system-err>
-  </testcase>
-  <testcase name="Valid login" classname="Login" time="35.632"/>
-  <testcase name="Add New Report" classname="Reports" time="65.107"/>
-  <testcase name="Add New Report" classname="Reports" time="66.59"/>
+  <testcase name="Add new employee" classname="Add Employee" time="14.241"/>
+  <testcase name="Add new employee" classname="Add Employee" time="12.156"/>
+  <testcase name="Add new employee" classname="Add Employee" time="12.623"/>
+  <testcase name="Add new employee" classname="Add Employee" time="13.656"/>
+  <testcase name="Add new employee" classname="Add Employee" time="13.091"/>
+  <testcase name="Add and Modify Employee Details" classname="Add Employee" time="33.277"/>
+  <testcase name="Invalid Login and message validation" classname="Login" time="5.161"/>
+  <testcase name="Invalid Login and message validation" classname="Login" time="3.992"/>
+  <testcase name="Invalid Login and message validation" classname="Login" time="4.741"/>
+  <testcase name="Invalid Login and message validation" classname="Login" time="4.075"/>
+  <testcase name="Search for invalid report" classname="Reports" time="15.684"/>
+  <testcase name="Search for valid report" classname="Reports" time="16.054"/>
 </testsuite>

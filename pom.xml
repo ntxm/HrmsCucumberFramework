@@ -61,7 +61,7 @@
 					
 					<configuration>
 						<includes>
-							<include>**/*SmokeRunner.java</include>
+							<include>**/*RegressionRunner.java</include>
 						</includes>
 						<testFailureIgnore>true</testFailureIgnore>
 				</configuration>

@@ -5,7 +5,7 @@ Feature: Recruitment. Add Candidates and Vacancies
     Given I logged in into HRMS
     And navigate to add candidate page
 
-  @inProgress
+  @smoke
   Scenario: Create new Candidate
     When I provide information about candidate
     And Choose date of application

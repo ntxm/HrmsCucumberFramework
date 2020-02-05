@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.hrms.runners.RegressionRunner
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 149.329 s - in com.hrms.runners.RegressionRunner
