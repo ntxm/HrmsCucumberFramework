@@ -16,6 +16,7 @@ public class LoginSteps extends CommonMethods {
 	public void i_enter_valid_username_and_valid_password() {
 		sendText(login.username, ConfigsReader.getProperty("username"));
 		sendText(login.password, ConfigsReader.getProperty("password"));
+		
 	}
 
 	@When("I click on the login button")
