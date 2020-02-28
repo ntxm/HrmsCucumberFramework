@@ -1,0 +1,10 @@
+{
+  "employee_id": "07156A",
+  "emp_firstname": "Aeroon",
+  "emp_lastname": "Baeroon",
+  "emp_middle_name": "Ros",
+  "emp_gender": 1,
+  "emp_birthday": "1990-01-01",
+  "emp_status": "Employee",
+  "emp_job_title": "Developer"
+}
