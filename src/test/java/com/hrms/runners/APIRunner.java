@@ -8,8 +8,8 @@ import cucumber.api.CucumberOptions;
 @CucumberOptions(
 			features = "src/test/resources/features/"
 			,glue = {"com.hrms.API.steps.practice"}
-			,dryRun = false
-			,tags = "@APITest"		
+			,dryRun = true
+			,tags = "@SyntaxHRMSAPIEndToEnd"		
 		)
 public class APIRunner {
 	

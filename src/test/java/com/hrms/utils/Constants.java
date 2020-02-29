@@ -33,5 +33,10 @@ public class Constants {
 	
 	public static final String DELETE_EMPLOYEE_URI = "http://54.167.125.15/syntaxapi/api/deleteEmployee.php";
 	
+	public static final String CREATE_EMP_FILEPATH = System.getProperty("user.dir") + "/src/test/resources/JSONFiles/createEmployee.json";
+	
+	public static final String UPDATE_EMP_FILEPATH = System.getProperty("user.dir") + "/src/test/resources/JSONFiles/updateEmployee.json";
+
+	
 }
 
