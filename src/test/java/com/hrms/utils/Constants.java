@@ -36,6 +36,8 @@ public class Constants {
 	public static final String CREATE_EMP_FILEPATH = System.getProperty("user.dir") + "/src/test/resources/JSONFiles/createEmployee.json";
 	
 	public static final String UPDATE_EMP_FILEPATH = System.getProperty("user.dir") + "/src/test/resources/JSONFiles/updateEmployee.json";
+	
+	public static final String GENERATE_TOKEN_JSON_FILEPATH = System.getProperty("user.dir") + "/src/test/resources/JSONFiles/generateToken.json";
 
 	
 }

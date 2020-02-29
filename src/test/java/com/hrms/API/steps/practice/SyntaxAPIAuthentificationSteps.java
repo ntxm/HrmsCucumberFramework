@@ -8,6 +8,7 @@ import static io.restassured.RestAssured.*;
 import org.openqa.selenium.remote.Command;
 
 import com.hrms.utils.CommonMethods;
+import com.hrms.utils.Constants;
 
 public class SyntaxAPIAuthentificationSteps {
 
@@ -23,7 +24,7 @@ public class SyntaxAPIAuthentificationSteps {
 			request = given().header("Content-Type", "application/json");
 			
 			System.out.println(request.log().all());
-			response = request.body(CommonMethods.readJson("/Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/resources/JSONFiles/generateToken.json"))
+			response = request.body(CommonMethods.readJson(Constants.GENERATE_TOKEN_JSON_FILEPATH))
 			.when().post(generateTokenURI);
 			System.out.println(response.prettyPrint());
 			
