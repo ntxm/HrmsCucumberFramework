@@ -9,7 +9,8 @@ import cucumber.api.CucumberOptions;
 			features = "src/test/resources/features/"
 			,glue = {"com.hrms.API.steps.practice"}
 			,dryRun = false
-			,tags = "@SyntaxHRMSAPIEndToEnd"
+		//	,tags = "@SyntaxHRMSAPIEndToEnd"
+		    ,tags = "@inProgressAPI"
 			,plugin = {"pretty"}
 			,monochrome = true
 		)

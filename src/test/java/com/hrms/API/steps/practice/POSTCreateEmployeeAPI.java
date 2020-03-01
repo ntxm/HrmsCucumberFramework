@@ -26,7 +26,7 @@ public class POSTCreateEmployeeAPI {
 	public void user_calls_createEmployee_API_to_verify_that_an_employee_was_created() {
 		
 		request = given().header("Content-type", "application/json")
-		.header("Authorization", "Bearer " + SyntaxAPIAuthentificationSteps.Token);
+		.header("Authorization", SyntaxAPIAuthentificationSteps.Token);
 		
 		request.body(CommonMethods.readJson(Constants.CREATE_EMP_FILEPATH));
 		

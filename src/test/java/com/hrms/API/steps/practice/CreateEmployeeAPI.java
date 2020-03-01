@@ -26,7 +26,7 @@ public class CreateEmployeeAPI {
 	@Given("user calls createEmployee API")
 	public void user_calls_createEmployee_API() {
 		request = given().header("Contetnt-Type", "application/json")
-		.header("Authorization", "Bearer " + SyntaxAPIAuthentificationSteps.Token);
+		.header("Authorization", SyntaxAPIAuthentificationSteps.Token);
 		
 		System.out.println("Token: " + SyntaxAPIAuthentificationSteps.Token);
 		

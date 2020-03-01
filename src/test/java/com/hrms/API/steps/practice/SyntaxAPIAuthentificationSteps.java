@@ -26,9 +26,9 @@ public class SyntaxAPIAuthentificationSteps {
 			System.out.println(request.log().all());
 			response = request.body(CommonMethods.readJson(Constants.GENERATE_TOKEN_JSON_FILEPATH))
 			.when().post(generateTokenURI);
-			System.out.println(response.prettyPrint());
+			response.prettyPrint();
 			
-			Token = response.jsonPath().getString("token");
+			Token = "Bearer " + response.jsonPath().getString("token");
 			
 			System.out.println("Token created: " + Token);
 	   

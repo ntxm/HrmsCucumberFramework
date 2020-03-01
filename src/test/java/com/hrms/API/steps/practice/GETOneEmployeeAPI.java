@@ -22,7 +22,7 @@ public class GETOneEmployeeAPI {
 	public void user_calls_getOneEmployee_API() {
 		
 		 request = given().header("Content-Type", "application/json")
-	                .header("Authorization", "Bearer " + SyntaxAPIAuthentificationSteps.Token)
+	                .header("Authorization", SyntaxAPIAuthentificationSteps.Token)
 	                .param("employee_id", POSTCreateEmployeeAPI.employee_ID);
 
 	    
