@@ -1,10 +1,10 @@
-Feature: Validating Syntax /createEmployee.php HRMS API
-Background:
+Feature: Create Employee API
 
+Background:
 Given user genereates token
 
 @SyntaxHRMSAPIEndToEnd
-Scenario: This test will check to see if an Employee is created
+Scenario: This test will check to see if an Employee is created successfully
 Given user calls createEmployee API to verify that an employee was created
 When User retrieves response for createEmployee API
 Then status code is 200 for createEmployeeAPI
