@@ -47,7 +47,7 @@ public class GETAllEmployees {
 		JSONArray array = json.getJSONArray("Employee");
 		System.out.println("Total employees: " + array.length());
 		
-		Assert.assertEquals("Total employee quantity NOT matched", 2764, array.length());
+		Assert.assertEquals("Total employee quantity NOT matched", 2793, array.length());
 
 		
 	}

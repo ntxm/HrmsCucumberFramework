@@ -3,7 +3,7 @@ Feature: Get All Employee Statuses API
 Background:
 Given user genereates token
 
-@inProgressAPI
+@SyntaxHRMSAPIEndToEnd
 Scenario: Get All Employee Statuses
 Given user calls getAllStatuses API to see list of employee statuses
 When user retrieve response from getAllStatuses API
