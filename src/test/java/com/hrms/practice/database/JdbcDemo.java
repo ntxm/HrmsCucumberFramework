@@ -35,6 +35,8 @@ public class JdbcDemo {
 		
 		
 		
+		
+		
 		//retrieve data from first row, column "name" from table
 		rset.next();
 		String firstRowData = rset.getString("name");
