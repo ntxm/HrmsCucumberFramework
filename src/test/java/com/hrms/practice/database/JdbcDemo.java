@@ -12,9 +12,10 @@ public class JdbcDemo {
 	
 	String dbUsername = "syntax_hrm";
 	String dbPassword = "syntaxhrm123";
-	
 	//jdbc:type driver:host:port/database_name
 	String dbURL = "jdbc:mysql://54.167.125.15:3306/syntaxhrm_mysql";
+	
+	
 	
 	// annotation @Test from jUnit.
 	//When we wants to run Cucumber test, we use jUnit annotation (runner) - @Test
@@ -43,12 +44,17 @@ public class JdbcDemo {
 		String secondRowData = rset.getObject("name").toString();
 		System.out.println(secondRowData);
 		
+		//retrieve all data from column "name" table "ohrm_nationality"
 		String data;
 		while(rset.next()) {
 			data = rset.getObject("name").toString();
 			System.out.println(data);
 			
 		}
+		
+		rset.close();
+		st.close();
+		connection.close();
 	}
 	
 }
