@@ -22,6 +22,7 @@ public class MetaData {
 		Connection connection = DriverManager.getConnection(dbURL, dbUsername, dbPassword);
 		
 		//create object of MetaData
+		//using MetaData we can get table information such as Column Name
 		DatabaseMetaData dbMetaData = connection.getMetaData();
 		
 		String dbName =  dbMetaData.getDatabaseProductName();
@@ -44,6 +45,10 @@ public class MetaData {
 			String columnName =  resultMetaData.getColumnName(i);
 			System.out.println("Column name " + i + ": " + columnName );
 		}
+		
+		resSet.close();
+		st.close();
+		connection.close();
 	}
 
 }
