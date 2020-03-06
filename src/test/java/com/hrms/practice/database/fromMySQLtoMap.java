@@ -69,6 +69,10 @@ public class fromMySQLtoMap {
 		
 		System.out.println("=== MAP OF ID AND TITLES ===");
 		System.out.println(map);
+		
+		rset.close();
+		pst.close();
+		connect.close();
 	}
 
 }
