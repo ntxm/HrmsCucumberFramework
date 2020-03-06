@@ -83,7 +83,8 @@
 
 				<configuration>
 					<includes>
-						<include>**/*RegressionRunner.java</include>
+						<!-- <include>**/*RegressionRunner.java</include> -->
+						<include>**/*inProgressRunner.java</include>
 					</includes>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>

@@ -19,6 +19,7 @@ import io.cucumber.datatable.DataTable;
 public class AddEmployeeSteps extends CommonMethods {
 	
 	String expectedEmployeeName;
+	String expectedEmployeeID;
 	
 	@Given("I logged in into HRMS")
 	public void i_logged_in_into_HRMS() {
@@ -38,6 +39,7 @@ public class AddEmployeeSteps extends CommonMethods {
 		sendText(addEmp.middleName, mName);
 		sendText(addEmp.lastName, lName);
 		expectedEmployeeName = fName + " " + mName + " " + lName;
+
 		
 	    
 	}
@@ -54,6 +56,8 @@ public class AddEmployeeSteps extends CommonMethods {
 		
 		Assert.assertEquals("Name is NOT matched", expectedEmployeeName, actualEmpName);
 	    
+		expectedEmployeeID = viewEmp.ActualEmployeeID.getAttribute("value");
+		System.out.println(expectedEmployeeID);
 	}
 	
 	@When("I enter employee details")

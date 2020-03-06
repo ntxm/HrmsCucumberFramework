@@ -5,7 +5,7 @@ Feature: Add Employee
     Given I logged in into HRMS
     And I navigate to Add Employee Page
 
-  @smoke
+  @smoke @inProgress
   Scenario: Add new employee
     When I add new employee with "Aeron", "Low" and "Baeron"
     And I ckick Save
@@ -35,3 +35,12 @@ Feature: Add Employee
       | DriverLisence | ExpirationDate | SSN         | SIN     | Gender | MaritalStatus | Nationality | DOB        |
       | N787878869    | 2021-12-08     | 123-45-6789 | 7687687 | Male   | Other         | Afghan      | 1980-10-10 |
       | L247091920    | 2018-12-08     | 123-45-0000 | 1010101 | Female | Married       | Burmese     | 1980-10-10 |
+
+  @smoke
+  Scenario: Add new employee and validate database
+    When I add new employee with "Aeron", "Low" and "Baeron"
+    And I ckick Save
+    And I verify if employee successfylly created
+    Then I collect employee data from database
+    And I verify employee data is matched
+    
