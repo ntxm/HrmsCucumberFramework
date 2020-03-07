@@ -129,7 +129,7 @@ public class AddEmployeeSteps extends CommonMethods {
 			}
 			
 			viewEmp.buttonEdit.click();
-			Thread.sleep(7000);
+			Thread.sleep(5000);
 		}
 		
 		
