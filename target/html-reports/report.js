@@ -41,7 +41,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Add new employee",
+  "name": "Add new employee and validate database",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -50,9 +50,6 @@ formatter.scenario({
     },
     {
       "name": "@addEmployee"
-    },
-    {
-      "name": "@smoke"
     },
     {
       "name": "@inProgress"
@@ -81,10 +78,30 @@ formatter.result({
 });
 formatter.step({
   "name": "I verify if employee successfylly created",
-  "keyword": "Then "
+  "keyword": "And "
 });
 formatter.match({
   "location": "AddEmployeeSteps.i_verify_if_employee_successfylly_created()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I collect employee data from database",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "AddEmployeeSteps.i_collect_employee_data_from_database()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify employee data is matched",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "AddEmployeeSteps.i_verify_employee_data_is_matched()"
 });
 formatter.result({
   "status": "passed"

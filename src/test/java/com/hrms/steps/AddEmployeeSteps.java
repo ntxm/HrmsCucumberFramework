@@ -1,14 +1,24 @@
 package com.hrms.steps;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.math3.analysis.function.Constant;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import com.hrms.utils.CommonMethods;
 import com.hrms.utils.ConfigsReader;
+import com.hrms.utils.DBUtils;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -20,6 +30,7 @@ public class AddEmployeeSteps extends CommonMethods {
 	
 	String expectedEmployeeName;
 	String expectedEmployeeID;
+	List<Map<String, String>> lmap;
 	
 	@Given("I logged in into HRMS")
 	public void i_logged_in_into_HRMS() {
@@ -135,6 +146,40 @@ public class AddEmployeeSteps extends CommonMethods {
 		
 	   
 	}//method ended
+
+	
+	
+	
+	@Then("I collect employee data from database")
+	public void i_collect_employee_data_from_database() {
+		DBUtils.createConnection();
+		String SQL = "SELECT emp_lastname, emp_firstname, employee_id FROM hs_hr_employees WHERE employee_id=" + expectedEmployeeID; 
+	
+		lmap = new ArrayList<>();
+		lmap = DBUtils.storeDataFromDB(SQL);
+		System.out.println(lmap);
+		
+
+	}
+
+	@Then("I verify employee data is matched")
+	public void i_verify_employee_data_is_matched() {
+		
+		for(Map<String, String> map: lmap) {
+			for(Map.Entry<String, String> entry: map.entrySet()) {
+				String key = entry.getKey();
+				String value = entry.getValue();
+				
+				if(key.equals("employee_id")) {
+					Assert.assertEquals("Data from DB and expected NOT matched", expectedEmployeeID, value);
+					break;
+				}
+				}
+			}
+		}
+		
+		
+
 
 
 }

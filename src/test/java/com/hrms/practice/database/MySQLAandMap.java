@@ -65,16 +65,6 @@ public class MySQLAandMap {
 
 		}
 
-//		while(rset.next()) {
-//			for(int i =1; i <= column; i++) {
-//				String colName = tbMetaData.getColumnName(i);
-//				String value = rset.getObject(i).toString();
-//				map.put(colName, value);
-//				
-//			}
-//
-//			System.out.println(map);
-//		}
 
 		
 		rset.close();

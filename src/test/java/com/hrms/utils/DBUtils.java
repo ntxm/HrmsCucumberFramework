@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Map;
 public class DBUtils {
 
 	private static Connection connect;
-	private static PreparedStatement pst;
+	private static Statement pst;
 	private static ResultSet rset;
 	private static List<Map<String, String>> listData;
 
@@ -27,6 +28,7 @@ public class DBUtils {
 		try {
 			connect = DriverManager.getConnection(ConfigsReader.getProperty("dbURL"),
 					ConfigsReader.getProperty("dbUsername"), ConfigsReader.getProperty("dbPassword"));
+					System.out.println("Connected");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -37,33 +39,31 @@ public class DBUtils {
 	 * 
 	 * Retrieve data and stored inside List<Map<String, String>>
 	 */
-	public static List<Map<String, String>> storeDataFromDB(String SQLQuery) {
+	
+	public static List<Map<String, String>> storeDataFromDB(String sqlQuery) {
 
 		try {
-			pst = connect.prepareStatement(SQLQuery);
-			rset = pst.executeQuery(SQLQuery);
-			ResultSetMetaData metaData = rset.getMetaData();
+			pst = connect.createStatement();
+			rset = pst.executeQuery(sqlQuery);
+			ResultSetMetaData rsetData = rset.getMetaData();
 			listData = new ArrayList<>();
 
 			while (rset.next()) {
 				Map<String, String> rowMap = new LinkedHashMap<>();
 
-				for (int i = 1; i <= metaData.getColumnCount(); i++) {
-
-					rowMap.put(metaData.getColumnName(i), rset.getObject(i).toString());
-
-					listData.add(rowMap);
+				for (int i = 1; i <= rsetData.getColumnCount(); i++) {
+					rowMap.put(rsetData.getColumnName(i), rset.getObject(i).toString());
 				}
-
+				listData.add(rowMap);
 			}
 
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		return listData;
-
 	}
+
+	
 
 	/**
 	 * 
