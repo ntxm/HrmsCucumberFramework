@@ -39,7 +39,7 @@ public class AddCandidateSteps extends CommonMethods {
 		sendText(rec.addCandidateResume, "/Users/natalia/eclipse-workspace/HRMSCucumberFramework/src/test/resources/testdata/test.txt");
 		
 		ddMenu = new Select(rec.addCandidateVacancy);
-		ddMenu.selectByVisibleText("Tester");
+		ddMenu.selectByVisibleText("abc");
 		
 	    
 		
