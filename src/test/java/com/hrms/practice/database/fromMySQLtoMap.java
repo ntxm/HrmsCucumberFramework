@@ -16,7 +16,7 @@ public class fromMySQLtoMap {
 
 	String dbUsername = "syntax_hrm";
 	String dbPassword = "syntaxhrm123";
-	String dbURL = "jdbc:mysql://54.167.125.15:3306/syntaxhrm_mysql";
+	String dbURL = "jdbc:mysql://166.62.36.207:3306/syntaxhrm_mysql";
 	String SQL = "SELECT * FROM ohrm_job_title";
 
 

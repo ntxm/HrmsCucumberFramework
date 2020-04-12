@@ -7,9 +7,9 @@ import cucumber.api.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 			features = "src/test/resources/features/"
-			,glue = {"com.hrms.API.steps.practice"}
+			,glue = {"com.hrms.API.practice"}
 			,dryRun = false
-			,tags = "@SyntaxHRMSAPIEndToEnd"
+			,tags = "@APIpractice"
 		 //   ,tags = "@inProgressAPI"
 			,plugin = {"pretty"}
 			,monochrome = true

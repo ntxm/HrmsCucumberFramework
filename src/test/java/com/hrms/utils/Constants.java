@@ -27,26 +27,26 @@ public class Constants {
 	
 	public static final String SCREENSHOTS_FILEPATH = System.getProperty("user.dir")+"/target/screenshots/";
 	
-	public static final String CREATE_EMPLOYEE_URI = "http://54.167.125.15/syntaxapi/api/createEmployee.php";
+	public static final String CREATE_EMPLOYEE_URI = "http://166.62.36.207/syntaxapi/api/createEmployee.php";
 	
-	public static final String GET_ONE_EMPLOYEE_URI = "http://54.167.125.15/syntaxapi/api/getOneEmployee.php";
+	public static final String GET_ONE_EMPLOYEE_URI = "http://166.62.36.207/syntaxapi/api/getOneEmployee.php";
 	
-	public static final String UPDATE_EMPLOYEE_URI = "http://54.167.125.15/syntaxapi/api/updateEmployee.php";
+	public static final String UPDATE_EMPLOYEE_URI = "http://166.62.36.207/syntaxapi/api/updateEmployee.php";
 	
-	public static final String DELETE_EMPLOYEE_URI = "http://54.167.125.15/syntaxapi/api/deleteEmployee.php";
+	public static final String DELETE_EMPLOYEE_URI = "http://166.62.36.207/syntaxapi/api/deleteEmployee.php";
 	
 	public static final String CREATE_EMP_FILEPATH = System.getProperty("user.dir") + "/src/test/resources/JSONFiles/createEmployee.json";
 	
 	public static final String UPDATE_EMP_FILEPATH = System.getProperty("user.dir") + "/src/test/resources/JSONFiles/updateEmployee.json";
 	
-	public static final String GENERATE_TOKEN_URI ="http://54.167.125.15/syntaxapi/api/generateToken.php";
+	public static final String GENERATE_TOKEN_URI ="http://166.62.36.207/syntaxapi/api/generateToken.php";
 	
 	public static final String GENERATE_TOKEN_JSON_FILEPATH = System.getProperty("user.dir") + "/src/test/resources/JSONFiles/generateToken.json";
 
-	public static final String GET_ALL_EMPLOYEES = "http://54.167.125.15/syntaxapi/api/getAllEmployees.php";
+	public static final String GET_ALL_EMPLOYEES = "http://166.62.36.207/syntaxapi/api/getAllEmployees.php";
 	
-	public static final String GET_ALL_JOB_TITLES = "http://54.167.125.15/syntaxapi/api/jobTitle.php";
+	public static final String GET_ALL_JOB_TITLES = "http://166.62.36.207/syntaxapi/api/jobTitle.php";
 	
-	public static final String GET_ALL_EMP_STATUSES = "http://54.167.125.15/syntaxapi/api/employeeStatus.php";
+	public static final String GET_ALL_EMP_STATUSES = "http://166.62.36.207/syntaxapi/api/employeeStatus.php";
 }
 
